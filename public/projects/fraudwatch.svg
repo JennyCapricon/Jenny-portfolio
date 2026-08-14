@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="FraudWatch screenshot placeholder">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+    <linearGradient id="glow" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e5484d" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#e5484d" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#121214"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1312" cy="162" rx="340" ry="280" fill="url(#glow)"/>
+  <rect x="1280" y="0" width="3" height="900" fill="#e5484d"/>
+  <rect x="0" y="897" width="1600" height="3" fill="#e5484d" opacity="0.4"/>
+  <text x="160" y="396" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="30" fill="#e5484d" letter-spacing="4">
+    &gt;_ PROJECT
+  </text>
+  <text x="160" y="504.00000000000006" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="700" fill="#fafafa">
+    FraudWatch
+  </text>
+  <text x="160" y="594" font-family="Inter, system-ui, sans-serif" font-size="36" fill="#9b9ba3">
+    Fraud Reporting Portal
+  </text>
+  <text x="160" y="738" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" fill="#5c5c66">
+    screenshot placeholder — replace with a real capture
+  </text>
+</svg>
