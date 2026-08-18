@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
+import { GitHubIcon, LinkedInIcon, MailIcon } from '../components/icons.jsx';
 import { CONTACT, PROFILE } from '../data/portfolio.js';
 
 const initialForm = { name: '', email: '', subject: '', message: '' };
@@ -36,43 +37,80 @@ export default function Contact() {
   };
 
   const fieldClass = (name) =>
-    `w-full rounded-lg border bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-muted/50 transition-colors focus:outline-none ${
-      errors[name] ? 'border-accent' : 'border-ink-line focus:border-muted'
+    `w-full rounded-xl border bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-dim/70 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/25 ${
+      errors[name] ? 'border-accent' : 'border-ink-line focus:border-accent/60'
     }`;
 
   const mailtoLink = `mailto:${PROFILE.email}?subject=${encodeURIComponent(
     form.subject || 'Portfolio message from ' + (form.name || 'a visitor'),
   )}&body=${encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)}`;
 
+  const channels = [
+    {
+      key: 'email',
+      label: 'Email',
+      value: PROFILE.email,
+      href: `mailto:${PROFILE.email}`,
+      external: false,
+      icon: MailIcon,
+    },
+    {
+      key: 'github',
+      label: 'GitHub',
+      value: PROFILE.githubLabel,
+      href: PROFILE.github,
+      external: true,
+      icon: GitHubIcon,
+    },
+  ];
+
+  if (PROFILE.linkedin) {
+    channels.push({
+      key: 'linkedin',
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/jenny-nwadike',
+      href: PROFILE.linkedin,
+      external: true,
+      icon: LinkedInIcon,
+    });
+  }
+
   return (
-    <section id="contact" className="border-t border-ink-line">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+    <section id="contact" className="border-t border-ink-line bg-ink-soft/50">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
         <SectionHeading eyebrow="Contact" title={CONTACT.heading} description={CONTACT.description} />
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-5">
+        <div className="mt-16 grid gap-10 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">
             <div className="space-y-6">
-              <div className="rounded-xl border border-ink-line bg-ink-card p-6">
-                <h3 className="text-sm font-semibold text-paper">Direct channels</h3>
-                <ul className="mt-4 space-y-3 text-sm">
-                  <li>
-                    <a
-                      href={`mailto:${PROFILE.email}`}
-                      className="break-all text-muted transition-colors hover:text-paper"
-                    >
-                      {PROFILE.email}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={PROFILE.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-muted transition-colors hover:text-paper"
-                    >
-                      {PROFILE.githubLabel}
-                    </a>
-                  </li>
+              <div className="relative overflow-hidden rounded-2xl border border-ink-line bg-ink-card p-6 sm:p-8">
+                <span
+                  className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent"
+                  aria-hidden="true"
+                />
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
+                  / direct channels
+                </p>
+                <ul className="mt-6 space-y-4 text-sm">
+                  {channels.map(({ key, label, value, href, external, icon: Icon }) => (
+                    <li key={key}>
+                      <a
+                        href={href}
+                        {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                        className="group flex items-center gap-4 break-all text-muted transition-colors hover:text-paper"
+                      >
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-ink-line bg-ink-soft text-muted transition-colors group-hover:border-accent/40 group-hover:text-accent">
+                          <Icon size={15} />
+                        </span>
+                        <span>
+                          <span className="block font-mono text-[10px] uppercase tracking-wider text-dim">
+                            {label}
+                          </span>
+                          {value}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <p className="text-sm leading-relaxed text-muted">
@@ -173,7 +211,7 @@ export default function Contact() {
               {submitted ? (
                 <div
                   role="status"
-                  className="rounded-lg border border-ink-line bg-ink-card p-5 text-sm leading-relaxed text-muted"
+                  className="rounded-xl border border-ink-line bg-ink-card p-5 text-sm leading-relaxed text-muted"
                 >
                   Your message is ready. Email delivery isn't configured on this site yet, so open
                   the link below and send from your own email client:
@@ -187,7 +225,7 @@ export default function Contact() {
               ) : (
                 <button
                   type="submit"
-                  className="rounded-lg bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#c93c41]"
+                  className="rounded-lg bg-accent px-7 py-3 text-sm font-semibold text-ink transition-all duration-200 hover:bg-accent-strong hover:shadow-[0_10px_28px_-12px_rgba(232,181,74,0.5)]"
                 >
                   Send Message
                 </button>

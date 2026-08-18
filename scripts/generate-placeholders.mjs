@@ -6,7 +6,6 @@ const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'pr
 mkdirSync(outDir, { recursive: true });
 
 const projects = [
-  ['jay-enterprise', 'Jay Enterprise', 'Multi-Vendor E-Commerce Platform'],
   ['flowboard', 'FlowBoard', 'Productivity Task Manager'],
   ['creatorhub', 'Creator Hub', 'Creator Platform'],
   ['acetest', 'AceTest', 'Computer-Based Testing Platform'],
@@ -32,16 +31,16 @@ function svg(name, tagline, width = 1600, height = 900) {
       <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
     </pattern>
     <linearGradient id="glow" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e5484d" stop-opacity="0.14"/>
-      <stop offset="1" stop-color="#e5484d" stop-opacity="0.02"/>
+      <stop offset="0" stop-color="#e8b54a" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#e8b54a" stop-opacity="0.02"/>
     </linearGradient>
   </defs>
   <rect width="${width}" height="${height}" fill="#121214"/>
   <rect width="${width}" height="${height}" fill="url(#grid)"/>
   <ellipse cx="${width * 0.82}" cy="${height * 0.18}" rx="340" ry="280" fill="url(#glow)"/>
-  <rect x="${width * 0.8}" y="0" width="3" height="${height}" fill="#e5484d"/>
-  <rect x="0" y="${height - 3}" width="${width}" height="3" fill="#e5484d" opacity="0.4"/>
-  <text x="${width * 0.1}" y="${height * 0.44}" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="30" fill="#e5484d" letter-spacing="4">
+  <rect x="${width * 0.8}" y="0" width="3" height="${height}" fill="#e8b54a"/>
+  <rect x="0" y="${height - 3}" width="${width}" height="3" fill="#e8b54a" opacity="0.4"/>
+  <text x="${width * 0.1}" y="${height * 0.44}" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="30" fill="#e8b54a" letter-spacing="4">
     &gt;_ PROJECT
   </text>
   <text x="${width * 0.1}" y="${height * 0.56}" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="700" fill="#fafafa">

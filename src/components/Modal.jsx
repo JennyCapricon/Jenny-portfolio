@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { CloseIcon } from './icons.jsx';
 
 export default function Modal({ open, onClose, labelledBy, children, wide = false }) {
   const dialogRef = useRef(null);
@@ -43,7 +44,7 @@ export default function Modal({ open, onClose, labelledBy, children, wide = fals
       <div
         ref={dialogRef}
         tabIndex={-1}
-        className={`relative max-h-[85vh] w-full overflow-y-auto rounded-xl border border-ink-line bg-ink-card shadow-2xl outline-none ${
+        className={`relative max-h-[85vh] w-full overflow-y-auto rounded-3xl border border-ink-line bg-ink-card shadow-2xl outline-none ${
           wide ? 'max-w-4xl' : 'max-w-3xl'
         }`}
       >
@@ -51,16 +52,9 @@ export default function Modal({ open, onClose, labelledBy, children, wide = fals
           type="button"
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-ink-line bg-ink-soft text-muted transition-colors hover:border-muted hover:text-paper"
+          className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-ink-line bg-ink-soft text-muted transition-colors hover:border-accent/50 hover:text-paper"
         >
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path
-              d="M1 1l12 12M13 1L1 13"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-            />
-          </svg>
+          <CloseIcon />
         </button>
         {children}
       </div>

@@ -5,8 +5,8 @@
       <stop offset="1" stop-color="#0a0a0b"/>
     </linearGradient>
     <linearGradient id="heroGlow" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e5484d" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#e5484d" stop-opacity="0.02"/>
+      <stop offset="0" stop-color="#e8b54a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#e8b54a" stop-opacity="0.02"/>
     </linearGradient>
     <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#17171a"/>
@@ -21,7 +21,7 @@
 
   <!-- browser chrome -->
   <rect x="56" y="60" width="1488" height="60" rx="12" fill="#17171a" stroke="#26262b"/>
-  <circle cx="92" cy="90" r="7" fill="#e5484d"/>
+  <circle cx="92" cy="90" r="7" fill="#e8b54a"/>
   <circle cx="116" cy="90" r="7" fill="#5c5c66"/>
   <circle cx="140" cy="90" r="7" fill="#5c5c66"/>
   <rect x="300" y="76" width="560" height="28" rx="14" fill="#121214" stroke="#26262b"/>
@@ -30,12 +30,12 @@
 
   <!-- sidebar -->
   <rect x="56" y="120" width="250" height="820" rx="12" fill="#121214" stroke="#26262b"/>
-  <text x="92" y="170" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#fafafa"><tspan fill="#e5484d">&gt;_</tspan> JAY</text>
+  <text x="92" y="170" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#fafafa"><tspan fill="#e8b54a">&gt;_</tspan> JAY</text>
   <text x="92" y="192" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#5c5c66" letter-spacing="3">ENTERPRISE</text>
 
   <g font-family="Inter, system-ui, sans-serif" font-size="17">
-    <rect x="76" y="230" width="210" height="40" rx="8" fill="#e5484d" fill-opacity="0.14"/>
-    <text x="94" y="256" fill="#e5484d">&#9679; Dashboard</text>
+    <rect x="76" y="230" width="210" height="40" rx="8" fill="#e8b54a" fill-opacity="0.14"/>
+    <text x="94" y="256" fill="#e8b54a">&#9679; Dashboard</text>
     <text x="94" y="310" fill="#9b9ba3">Shop</text>
     <text x="94" y="360" fill="#9b9ba3">Categories</text>
     <text x="94" y="410" fill="#9b9ba3">Orders</text>
@@ -55,22 +55,22 @@
     <rect x="356" y="252" width="280" height="132" rx="12" fill="url(#card)" stroke="#26262b"/>
     <text x="384" y="296" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#9b9ba3" letter-spacing="2">PRODUCTS</text>
     <text x="384" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700" fill="#fafafa">1,248</text>
-    <path d="M384 372 l90 0" stroke="#e5484d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M384 372 l90 0" stroke="#e8b54a" stroke-width="3" stroke-linecap="round"/>
 
     <rect x="656" y="252" width="280" height="132" rx="12" fill="url(#card)" stroke="#26262b"/>
     <text x="684" y="296" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#9b9ba3" letter-spacing="2">VENDORS</text>
     <text x="684" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700" fill="#fafafa">86</text>
-    <path d="M684 372 l60 0" stroke="#e5484d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M684 372 l60 0" stroke="#e8b54a" stroke-width="3" stroke-linecap="round"/>
 
     <rect x="956" y="252" width="280" height="132" rx="12" fill="url(#card)" stroke="#26262b"/>
     <text x="984" y="296" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#9b9ba3" letter-spacing="2">ORDERS</text>
     <text x="984" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700" fill="#fafafa">3,512</text>
-    <path d="M984 372 l110 0" stroke="#e5484d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M984 372 l110 0" stroke="#e8b54a" stroke-width="3" stroke-linecap="round"/>
 
     <rect x="1256" y="252" width="250" height="132" rx="12" fill="url(#card)" stroke="#26262b"/>
     <text x="1284" y="296" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#9b9ba3" letter-spacing="2">PENDING APPROVALS</text>
-    <text x="1284" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700" fill="#e5484d">14</text>
-    <path d="M1284 372 l80 0" stroke="#e5484d" stroke-width="3" stroke-linecap="round"/>
+    <text x="1284" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700" fill="#e8b54a">14</text>
+    <path d="M1284 372 l80 0" stroke="#e8b54a" stroke-width="3" stroke-linecap="round"/>
   </g>
 
   <!-- product cards -->
@@ -78,34 +78,34 @@
     <rect x="356" y="424" width="340" height="320" rx="12" fill="url(#card)" stroke="#26262b"/>
     <rect x="376" y="444" width="300" height="170" rx="8" fill="#1c1c21"/>
     <rect x="376" y="444" width="300" height="170" rx="8" fill="url(#heroGlow)"/>
-    <path d="M406 570 l70 -40 45 30 60 -50 95 70" fill="none" stroke="#e5484d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M406 570 l70 -40 45 30 60 -50 95 70" fill="none" stroke="#e8b54a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="376" y="646" font-size="18" font-weight="600" fill="#fafafa">Ankara Wax Fabric</text>
     <text x="376" y="674" font-size="15" fill="#9b9ba3">Vendor: Okafor Textiles</text>
-    <text x="376" y="708" font-size="20" font-weight="700" fill="#e5484d">&#8358;4,500</text>
+    <text x="376" y="708" font-size="20" font-weight="700" fill="#e8b54a">&#8358;4,500</text>
     <text x="500" y="708" font-size="13" fill="#5c5c66">/yard</text>
 
     <rect x="716" y="424" width="340" height="320" rx="12" fill="url(#card)" stroke="#26262b"/>
     <rect x="736" y="444" width="300" height="170" rx="8" fill="#1c1c21"/>
     <rect x="736" y="444" width="300" height="170" rx="8" fill="url(#heroGlow)"/>
-    <path d="M766 570 l60 -50 50 30 70 -40 90 60" fill="none" stroke="#e5484d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M766 570 l60 -50 50 30 70 -40 90 60" fill="none" stroke="#e8b54a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="736" y="646" font-size="18" font-weight="600" fill="#fafafa">Silk Scarf Collection</text>
     <text x="736" y="674" font-size="15" fill="#9b9ba3">Importer: Ade Importers</text>
-    <text x="736" y="708" font-size="20" font-weight="700" fill="#e5484d">&#8358;9,800</text>
+    <text x="736" y="708" font-size="20" font-weight="700" fill="#e8b54a">&#8358;9,800</text>
     <text x="860" y="708" font-size="13" fill="#5c5c66">/piece</text>
 
     <rect x="1076" y="424" width="340" height="320" rx="12" fill="url(#card)" stroke="#26262b"/>
     <rect x="1096" y="444" width="300" height="170" rx="8" fill="#1c1c21"/>
     <rect x="1096" y="444" width="300" height="170" rx="8" fill="url(#heroGlow)"/>
-    <path d="M1126 570 l80 -50 45 35 60 -45 85 60" fill="none" stroke="#e5484d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1126 570 l80 -50 45 35 60 -45 85 60" fill="none" stroke="#e8b54a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="1096" y="646" font-size="18" font-weight="600" fill="#fafafa">Beaded Accessories</text>
     <text x="1096" y="674" font-size="15" fill="#9b9ba3">Vendor: Bisi Crafts</text>
-    <text x="1096" y="708" font-size="20" font-weight="700" fill="#e5484d">&#8358;2,900</text>
+    <text x="1096" y="708" font-size="20" font-weight="700" fill="#e8b54a">&#8358;2,900</text>
     <text x="1220" y="708" font-size="13" fill="#5c5c66">/set</text>
   </g>
 
   <!-- bottom status bar -->
   <rect x="356" y="776" width="1060" height="52" rx="10" fill="#121214" stroke="#26262b"/>
-  <circle cx="384" cy="802" r="6" fill="#e5484d"/>
+  <circle cx="384" cy="802" r="6" fill="#e8b54a"/>
   <text x="400" y="807" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#9b9ba3">RLS ACTIVE — role-based access secured</text>
   <text x="1290" y="807" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#5c5c66">SUPABASE + POSTGRESQL</text>
 

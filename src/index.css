@@ -1,21 +1,24 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-ink: #0a0a0b;
-  --color-ink-soft: #121214;
-  --color-ink-card: #17171a;
-  --color-ink-line: #26262b;
-  --color-paper: #fafafa;
-  --color-muted: #9b9ba3;
-  --color-accent: #e5484d;
-  --color-accent-soft: #fdecec;
+  --color-ink: #0a0a0c;
+  --color-ink-soft: #0e0e13;
+  --color-ink-card: #14141a;
+  --color-ink-line: #24242c;
+  --color-paper: #f4f4f2;
+  --color-muted: #a3a3ab;
+  --color-dim: #6d6d76;
+  --color-accent: #e8b54a;
+  --color-accent-strong: #f0c15c;
+  --color-accent-deep: #c9932e;
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -28,7 +31,7 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-ink);
 }
 
 :focus-visible {
@@ -40,16 +43,20 @@ body {
 /* Subtle developer grid backdrop */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 44px 44px;
+    linear-gradient(to right, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 /* Reveal-on-scroll animation */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.is-visible {
@@ -57,13 +64,29 @@ body {
   transform: translateY(0);
 }
 
+/* Hero entrance (applied on mount via class) */
+.animate-enter {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .reveal {
+  .reveal,
+  .animate-enter {
     opacity: 1;
     transform: none;
+    animation: none;
     transition: none;
   }
   *,
@@ -83,9 +106,9 @@ body {
   background: var(--color-ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2c2c31;
+  background: #2b2b33;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
+  background: var(--color-accent-deep);
 }

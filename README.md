@@ -6,16 +6,13 @@ Built with **React + Vite + Tailwind CSS**.
 
 ## Sections
 
-- **Home** — hero with professional statement, GitHub and email
-- **About** — short introduction and development focus
-- **What I Build** — e-commerce platforms, dashboards, responsive websites and interactive web applications
+- **Hero** — name, role, professional statement, availability, email, GitHub, LinkedIn and location
+- **About** — who I am, what I build, my development journey and goals
 - **Skills** — front-end, application development, database/backend services, tools and currently-learning topics
-- **Projects** — flagship Jay Enterprise, featured projects, more projects and front-end explorations, with working category filters
+- **Projects** — flagship Jay Enterprise, featured projects, more projects and front-end explorations, with working category filters, case studies and GitHub links
 - **Project Documentation** — structured documentation for major projects (overview, problem, objectives, target users, features, technologies, role, process, challenges, solutions, lessons)
-- **Development Journey** — from HTML/CSS/JavaScript to database-connected applications
 - **How I Build** — the development process
-- **My Professional Profile** — connects CV, LinkedIn, GitHub, portfolio and project documentation
-- **Why Work With Me** — personal strengths
+- **CV** — invitation to view and download the CV, plus LinkedIn, GitHub, portfolio and documentation links
 - **Contact** — form and direct channels
 
 ## Getting Started
@@ -37,10 +34,11 @@ npm run preview
 ```
 src/
   components/    Reusable UI (Navbar, Footer, Modal, ProjectCard, CaseStudyContent, ...)
-  sections/      Page sections (Hero, About, Projects, Documentation, Contact, ...)
+  sections/      Page sections (Hero, About, Skills, Projects, Documentation, CV, Contact, ...)
   data/          All content: profile, projects, case study and documentation
 public/
   projects/      Project screenshot placeholders (replace with real captures)
+  cv/            CV file (Jenny_CV.pdf)
   favicon.svg
   og-cover.svg
 ```
@@ -60,11 +58,11 @@ All content lives in `src/data/portfolio.js`:
 
 ### Adding your CV
 
-Place your PDF at `public/cv/Jenny_CV.pdf` and set `PROFILE.cvUrl: '/cv/Jenny_CV.pdf'`. The **View CV** and **Download CV** buttons in the Professional Profile section will activate automatically.
+Place your PDF at `public/cv/Jenny_CV.pdf` and set `PROFILE.cvUrl: '/cv/Jenny_CV.pdf'`. The **View CV** and **Download CV** buttons will activate automatically.
 
 ### Project screenshots
 
-The `public/projects/` images are clean placeholders. Replace each file with a real screenshot (16:9) of the corresponding project. Regenerate placeholders with `node scripts/generate-placeholders.mjs`.
+The `public/projects/` images are clean placeholders. Replace each file with a real screenshot (16:9) of the corresponding project. Regenerate placeholders with `node scripts/generate-placeholders.mjs` (the Jay Enterprise image is a custom mock and is preserved).
 
 ## Security
 

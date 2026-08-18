@@ -1,12 +1,14 @@
+import { ExternalIcon, GitHubIcon } from './icons.jsx';
 import { JAY_ENTERPRISE_CASE_STUDY } from '../data/portfolio.js';
 
 function Block({ title, children }) {
   return (
     <div>
-      <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+      <h4 className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
         {title}
+        <span className="h-px w-6 bg-accent/40" aria-hidden="true" />
       </h4>
-      <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted">{children}</div>
+      <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted">{children}</div>
     </div>
   );
 }
@@ -36,13 +38,15 @@ export default function CaseStudyContent({ project, onClose }) {
 
   return (
     <article className="p-6 sm:p-10">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Case Study</p>
-      <h3 id="case-study-title" className="mt-2 text-2xl font-bold tracking-tight text-paper sm:text-3xl">
+      <p className="font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
+        Case Study
+      </p>
+      <h3 id="case-study-title" className="mt-2 font-display text-2xl font-bold tracking-tight text-paper sm:text-3xl">
         {project.name}
       </h3>
       <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted">{project.tagline}</p>
 
-      <div className="mt-6 overflow-hidden rounded-xl border border-ink-line">
+      <div className="mt-6 overflow-hidden rounded-2xl border border-ink-line">
         <img
           src={project.image}
           alt={`${project.name} interface preview`}
@@ -128,17 +132,16 @@ export default function CaseStudyContent({ project, onClose }) {
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#c93c41]"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-accent-strong"
           >
+            <GitHubIcon size={15} />
             View the source on GitHub
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M7 17 17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <ExternalIcon />
           </a>
           <button
             type="button"
             onClick={openDocumentation}
-            className="inline-flex items-center gap-2 rounded-lg border border-ink-line px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-muted hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-lg border border-ink-line px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-muted/60 hover:bg-white/[0.04]"
           >
             View Documentation
           </button>

@@ -11,7 +11,8 @@ export const PROFILE = {
   email: 'Jennynwadike894@gmail.com',
   location: 'Nigeria',
   linkedin: 'https://www.linkedin.com/in/jenny-nwadike-b515773a8',
-  cvUrl: '',
+  portfolioUrl: 'https://jenny-nwadike.netlify.app',
+  cvUrl: '/cv/Jenny_CV.pdf',
   professionalFocus:
     'Front-End Web Development • React • JavaScript • Responsive Design • Web Applications',
 };
@@ -21,9 +22,7 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Documentation', href: '#documentation' },
-  { label: 'Journey', href: '#journey' },
-  { label: 'Profile', href: '#profile' },
+  { label: 'CV', href: '#profile' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -144,6 +143,33 @@ export const WHY_ME = [
   },
 ];
 
+export const BUILD_ITEMS = [
+  {
+    title: 'E-Commerce Platforms',
+    description:
+      'I build marketplace experiences with products, vendors, buyers, inventory and payment integrations.',
+    icon: 'cart',
+  },
+  {
+    title: 'Dashboards',
+    description:
+      'I create structured dashboards and role-based interfaces for different types of users.',
+    icon: 'dashboard',
+  },
+  {
+    title: 'Responsive Websites',
+    description:
+      'I build interfaces that adapt smoothly across desktop, tablet and mobile devices.',
+    icon: 'responsive',
+  },
+  {
+    title: 'Interactive Web Applications',
+    description:
+      'I connect front-end interfaces with APIs, authentication and databases to create functional applications.',
+    icon: 'app',
+  },
+];
+
 export const CONTACT = {
   heading: "Let's Build Something Great",
   description:
@@ -165,21 +191,10 @@ export const PROJECTS = [
     name: 'Jay Enterprise',
     category: 'E-Commerce',
     filters: ['web-apps', 'ecommerce', 'dashboards', 'apis'],
-    tagline: 'Multi-Vendor E-Commerce Platform',
+    tagline: 'Fabric & Fashion Marketplace',
     description:
-      'Jay Enterprise is a multi-vendor digital marketplace designed to connect buyers with verified vendors and importers of fabrics and fashion accessories. The platform provides dedicated experiences for buyers, vendors, importers and administrators.',
-    technologies: [
-      'React',
-      'Vite',
-      'Tailwind CSS',
-      'MUI',
-      'Supabase',
-      'PostgreSQL',
-      'Row Level Security',
-      'Paystack',
-      'Flutterwave',
-      'Google OAuth',
-    ],
+      'An e-commerce marketplace designed to connect fabric vendors with customers and wholesale buyers. The platform includes product browsing, vendor management, secure checkout, order management, and a responsive shopping experience.',
+    technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Supabase', 'Paystack'],
     keyFeatures: [
       'Multi-vendor marketplace for fabrics and fashion accessories',
       'Dedicated buyer, vendor, importer and admin spaces',
@@ -204,6 +219,7 @@ export const PROJECTS = [
       'Security-aware structure using Row Level Security policies',
     ],
     github: 'https://github.com/JennyCapricon/LSM-enterprise',
+    live: '',
     caseStudy: true,
     featured: true,
     image: '/projects/jay-enterprise.svg',
@@ -223,6 +239,7 @@ export const PROJECTS = [
       'Forms with validation via React Hook Form',
     ],
     github: 'https://github.com/JennyCapricon/flowboard',
+    live: '',
     image: '/projects/flowboard.svg',
     featured: true,
   },
@@ -238,6 +255,7 @@ export const PROJECTS = [
     keyFeatures: ['Client app with state management (Zustand)', 'Charts and analytics visuals (Recharts)', 'Node API with authentication (JWT + bcrypt)'],
     contribution: ['Full front-end build', 'Server and database layer'], 
     github: 'https://github.com/JennyCapricon/CreatorHub',
+    live: '',
     image: '/projects/creatorhub.svg',
   },
   {
@@ -252,6 +270,7 @@ export const PROJECTS = [
     keyFeatures: ['Role-based accounts (student, teacher, admin)', 'Question bank and exam scheduling', 'Timed CBT interface with flagging and navigation', 'Instant grading and performance reports', 'Analytics dashboard'],
     contribution: ['Front-end build with React and Tailwind', 'Backend API with Express and PostgreSQL'],
     github: 'https://github.com/JennyCapricon/AceTest',
+    live: '',
     image: '/projects/acetest.svg',
     featured: true,
   },
@@ -266,6 +285,7 @@ export const PROJECTS = [
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
     keyFeatures: ['Product showcase for jewelry and accessories', 'Cart interaction', 'Responsive layout'],
     contribution: ['Complete front-end design and development'],
+    live: '',
     image: '/projects/jenny-store.svg',
   },
   {
@@ -279,6 +299,7 @@ export const PROJECTS = [
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'Zustand', 'Zod', 'Recharts'],
     keyFeatures: ['Daily missions and 30-day progress calendar', 'Streak counters and milestone badges', 'Progress analytics and achievement system'],
     contribution: ['Front-end and application development'],
+    live: '',
     image: '/projects/evolve30.svg',
     featured: true,
   },
@@ -293,6 +314,7 @@ export const PROJECTS = [
     technologies: ['React', 'Vite', 'Node.js', 'Express'],
     keyFeatures: ['Front-end with Vite and React', 'API backend for platform data'],
     contribution: ['Full front-end build', 'Backend API'],
+    live: '',
     image: '/projects/hgam.svg',
   },
   {
@@ -306,6 +328,7 @@ export const PROJECTS = [
     technologies: ['React', 'Vite', 'JavaScript'],
     keyFeatures: ['Report fraud flow with success feedback', 'Verify and browse existing reports', 'Persistence via localStorage'],
     contribution: ['Front-end development'],
+    live: '',
     image: '/projects/fraudwatch.svg',
   },
   {
@@ -320,6 +343,7 @@ export const PROJECTS = [
     keyFeatures: ['E-commerce storefront layout', 'Product grid and sections'],
     contribution: ['Front-end implementation'],
     practice: true,
+    live: '',
     image: '/projects/temu-clone.svg',
   },
 ];

@@ -1,22 +1,24 @@
 import { useState } from 'react';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
+import { ExternalIcon, GitHubIcon } from '../components/icons.jsx';
 import { DOCUMENTATION } from '../data/portfolio.js';
 
 function Section({ title, children }) {
   return (
-    <section className="border-t border-ink-line pt-6">
-      <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+    <section className="border-t border-ink-line pt-8">
+      <h4 className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
         {title}
+        <span className="h-px w-6 bg-accent/40" aria-hidden="true" />
       </h4>
-      <div className="mt-3 text-sm leading-relaxed text-muted">{children}</div>
+      <div className="mt-4 text-sm leading-relaxed text-muted">{children}</div>
     </section>
   );
 }
 
 function List({ items }) {
   return (
-    <ul className="space-y-2">
+    <ul className="space-y-2.5">
       {items.map((item) => (
         <li key={item} className="flex gap-2.5">
           <span aria-hidden="true" className="mt-0.5 text-accent">
@@ -29,30 +31,24 @@ function List({ items }) {
   );
 }
 
-function GitHubIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.54-.01 2.78-.01 3.16 0 .31.2.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-    </svg>
-  );
-}
-
 export default function Documentation() {
   const [activeId, setActiveId] = useState(DOCUMENTATION[0].id);
   const doc = DOCUMENTATION.find((d) => d.id === activeId) || DOCUMENTATION[0];
 
   return (
-    <section id="documentation" className="border-t border-ink-line bg-ink-soft/40">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+    <section id="documentation" className="border-t border-ink-line bg-ink-soft/50">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
         <SectionHeading
           eyebrow="Documentation"
           title="Project Documentation"
           description="In-depth documentation for my major projects — what each one is, the problem it solves and how it was built."
         />
 
-        <Reveal className="mt-12">
-          <div className="rounded-2xl border border-ink-line bg-ink-card">
-            <div className="flex flex-wrap gap-1 border-b border-ink-line p-3">
+        <Reveal className="mt-14">
+          <div className="overflow-hidden rounded-3xl border border-ink-line bg-ink-card">
+            <div
+              className="flex flex-wrap gap-x-1 border-b border-ink-line px-4 sm:px-6"
+            >
               {DOCUMENTATION.map((item) => {
                 const active = item.id === activeId;
                 return (
@@ -61,10 +57,10 @@ export default function Documentation() {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setActiveId(item.id)}
-                    className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                    className={`-mb-px border-b-2 px-4 py-3.5 text-sm font-medium transition-colors ${
                       active
-                        ? 'bg-accent text-white'
-                        : 'text-muted hover:bg-white/5 hover:text-paper'
+                        ? 'border-accent text-paper'
+                        : 'border-transparent text-muted hover:text-paper'
                     }`}
                   >
                     {item.name}
@@ -74,7 +70,7 @@ export default function Documentation() {
             </div>
 
             <article className="p-6 sm:p-10">
-              <div className="overflow-hidden rounded-xl border border-ink-line">
+              <div className="overflow-hidden rounded-2xl border border-ink-line">
                 <img
                   src={doc.image}
                   alt={`${doc.name} — ${doc.tagline} interface preview`}
@@ -84,8 +80,10 @@ export default function Documentation() {
               </div>
 
               <div className="mt-8">
-                <h3 className="text-2xl font-bold tracking-tight text-paper">{doc.name}</h3>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted">
+                <h3 className="font-display text-2xl font-bold tracking-tight text-paper sm:text-3xl">
+                  {doc.name}
+                </h3>
+                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-accent">
                   {doc.tagline}
                 </p>
               </div>
@@ -123,7 +121,7 @@ export default function Documentation() {
                 <Section title="User Roles">
                   <div className="grid gap-3 sm:grid-cols-2">
                     {doc.roles.map((role) => (
-                      <div key={role.title} className="rounded-lg border border-ink-line bg-ink-soft/50 p-4">
+                      <div key={role.title} className="rounded-xl border border-ink-line bg-ink-soft/50 p-4">
                         <h5 className="text-sm font-semibold text-paper">{role.title}</h5>
                         <p className="mt-1.5 text-xs leading-relaxed text-muted">{role.description}</p>
                       </div>
@@ -140,7 +138,7 @@ export default function Documentation() {
                 <Section title="How It Works">
                   <div className="space-y-3">
                     {doc.areas.map((area) => (
-                      <div key={area.title} className="rounded-lg border border-ink-line bg-ink-soft/50 p-4">
+                      <div key={area.title} className="rounded-xl border border-ink-line bg-ink-soft/50 p-4">
                         <h5 className="text-sm font-semibold text-paper">{area.title}</h5>
                         <p className="mt-1.5 text-xs leading-relaxed text-muted">{area.text}</p>
                       </div>
@@ -188,10 +186,11 @@ export default function Documentation() {
                     href={doc.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-ink-line px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-muted hover:bg-white/5"
+                    className="inline-flex items-center gap-2 rounded-lg border border-ink-line px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-muted/60 hover:bg-white/[0.04]"
                   >
-                    <GitHubIcon />
+                    <GitHubIcon size={15} />
                     View on GitHub
+                    <ExternalIcon />
                   </a>
                 </div>
               )}

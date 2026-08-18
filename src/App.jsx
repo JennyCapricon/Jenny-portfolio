@@ -5,14 +5,11 @@ import Modal from './components/Modal.jsx';
 import CaseStudyContent from './components/CaseStudyContent.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
-import Build from './sections/Build.jsx';
 import Skills from './sections/Skills.jsx';
 import Projects from './sections/Projects.jsx';
 import Documentation from './sections/Documentation.jsx';
 import Process from './sections/Process.jsx';
-import Journey from './sections/Journey.jsx';
 import ProfessionalProfile from './sections/ProfessionalProfile.jsx';
-import WhyMe from './sections/WhyMe.jsx';
 import Contact from './sections/Contact.jsx';
 
 export default function App() {
@@ -26,7 +23,7 @@ export default function App() {
     <>
       <a
         href="#home"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-ink"
       >
         Skip to content
       </a>
@@ -36,7 +33,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Build />
         <Skills />
         <Projects
           activeFilter={activeFilter}
@@ -44,10 +40,8 @@ export default function App() {
           onOpenCaseStudy={openCaseStudy}
         />
         <Documentation />
-        <Journey />
         <Process />
         <ProfessionalProfile />
-        <WhyMe />
         <Contact />
       </main>
 
