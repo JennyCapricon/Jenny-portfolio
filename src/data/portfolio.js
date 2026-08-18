@@ -222,7 +222,7 @@ export const PROJECTS = [
     live: '',
     caseStudy: true,
     featured: true,
-    image: '/projects/jay-enterprise.svg',
+    image: '/projects/jay-enterprise.png',
   },
   {
     id: 'flowboard',
@@ -419,7 +419,7 @@ export const DOCUMENTATION = [
     id: 'jay-enterprise',
     name: 'Jay Enterprise',
     tagline: 'Multi-Vendor E-Commerce Platform',
-    image: '/projects/jay-enterprise.svg',
+    image: '/projects/jay-enterprise.png',
     github: 'https://github.com/JennyCapricon/LSM-enterprise',
     overview:
       'Jay Enterprise is a multi-vendor digital marketplace that connects buyers with verified vendors and importers of fabrics and fashion accessories. It provides a public storefront plus dedicated, private spaces for buyers, vendors, importers and administrators — all built on a secure Supabase + PostgreSQL database.',
