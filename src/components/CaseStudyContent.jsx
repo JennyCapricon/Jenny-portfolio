@@ -50,7 +50,7 @@ export default function CaseStudyContent({ project, onClose }) {
         <img
           src={project.image}
           alt={`${project.name} interface preview`}
-          className="aspect-[16/9] w-full object-cover"
+          className="aspect-[21/9] w-full object-cover"
         />
       </div>
 

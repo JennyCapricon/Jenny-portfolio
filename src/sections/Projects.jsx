@@ -14,39 +14,38 @@ function FlagshipProject({ project, onOpenCaseStudy }) {
         className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
         aria-hidden="true"
       />
-      <div className="grid lg:grid-cols-2">
-        <div className="relative overflow-hidden border-b border-ink-line lg:border-b-0 lg:border-r">
-          <img
-            src={project.image}
-            alt={`${project.name} — ${project.tagline}`}
-            loading="lazy"
-            className="h-full min-h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] sm:min-h-[300px]"
-          />
-          <div
-            className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink-card to-transparent lg:from-transparent"
-            aria-hidden="true"
-          />
-          <span className="absolute left-4 top-4 rounded-md bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-ink">
-            Featured Project
-          </span>
-          <span className="absolute right-4 top-4 rounded-md border border-ink-line bg-ink/80 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-muted backdrop-blur-sm">
-            {project.category}
-          </span>
-        </div>
+      <div className="relative overflow-hidden">
+        <img
+          src={project.image}
+          alt={`${project.name} — ${project.tagline}`}
+          loading="lazy"
+          className="aspect-[21/9] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ink-card/90 to-transparent"
+          aria-hidden="true"
+        />
+        <span className="absolute left-4 top-4 rounded-md bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-ink">
+          Featured Project
+        </span>
+        <span className="absolute right-4 top-4 rounded-md border border-ink-line bg-ink/80 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-muted backdrop-blur-sm">
+          {project.category}
+        </span>
+      </div>
 
-        <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10">
-          <div>
-            <p className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
-              Main Project
-              <span className="h-px w-8 bg-accent/40" aria-hidden="true" />
-            </p>
-            <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
-              {project.name}
-            </h3>
-            <p className="mt-2 font-mono text-xs uppercase tracking-wider text-muted">
-              {project.tagline}
-            </p>
-          </div>
+      <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10">
+        <div>
+          <p className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.28em] text-accent">
+            Main Project
+            <span className="h-px w-8 bg-accent/40" aria-hidden="true" />
+          </p>
+          <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
+            {project.name}
+          </h3>
+          <p className="mt-2 font-mono text-xs uppercase tracking-wider text-muted">
+            {project.tagline}
+          </p>
+        </div>
 
           <p className="text-sm leading-relaxed text-muted sm:text-base">{project.description}</p>
 
@@ -91,7 +90,6 @@ function FlagshipProject({ project, onOpenCaseStudy }) {
             </button>
           </div>
         </div>
-      </div>
     </article>
   );
 }
