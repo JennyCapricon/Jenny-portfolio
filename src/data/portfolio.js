@@ -233,6 +233,7 @@ export const PROJECTS = [
     github: 'https://github.com/JennyCapricon/CreatorHub',
     live: 'https://con-creator-hub.netlify.app',
     image: '/projects/creatorhub.svg',
+    featured: true,
   },
   {
     id: 'acetest',

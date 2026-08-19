@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import ProjectCard from '../components/ProjectCard.jsx';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
-import { ChevronIcon, ExternalIcon, GitHubIcon } from '../components/icons.jsx';
-import { PROJECTS, SMALL_PROJECTS, PROJECT_FILTERS } from '../data/portfolio.js';
+import { ExternalIcon, GitHubIcon } from '../components/icons.jsx';
+import { PROJECTS, PROJECT_FILTERS } from '../data/portfolio.js';
 
 function FlagshipProject({ project, onOpenCaseStudy }) {
   const hasLive = Boolean(project.live);
@@ -103,8 +102,6 @@ function SectionLabel({ children }) {
 }
 
 export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy }) {
-  const [showAll, setShowAll] = useState(false);
-
   const visibleProjects = PROJECTS.filter((project) => {
     if (activeFilter === 'all') return true;
     return project.filters.includes(activeFilter);
@@ -112,9 +109,7 @@ export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy
 
   const flagship = PROJECTS.find((project) => project.id === 'jay-enterprise');
   const featured = PROJECTS.filter((project) => project.featured && project.id !== 'jay-enterprise');
-  const more = PROJECTS.filter((project) => !project.featured);
   const isFiltered = activeFilter !== 'all';
-  const hasHiddenProjects = more.length > 0 || SMALL_PROJECTS.length > 0;
 
   return (
     <section id="projects" className="border-t border-ink-line">
@@ -178,37 +173,6 @@ export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy
                 ))}
               </div>
             </div>
-
-            <Reveal className="mt-12">
-              <div className="flex justify-center">
-                {hasHiddenProjects && (
-                  <button
-                    type="button"
-                    aria-expanded={showAll}
-                    onClick={() => setShowAll((prev) => !prev)}
-                    className="inline-flex items-center gap-2 rounded-lg border border-ink-line px-6 py-3 text-sm font-medium text-paper transition-colors hover:border-muted/60 hover:bg-white/[0.04]"
-                  >
-                    {showAll ? 'Show Less' : 'View All Projects'}
-                    <ChevronIcon open={showAll} />
-                  </button>
-                )}
-              </div>
-            </Reveal>
-
-            {showAll && (
-              <>
-                <div className="mt-16">
-                  <SectionLabel>More Projects</SectionLabel>
-                  <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {more.map((project, index) => (
-                      <Reveal key={project.id} delay={index * 80}>
-                        <ProjectCard project={project} onOpenCaseStudy={onOpenCaseStudy} />
-                      </Reveal>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
           </>
         )}
 
