@@ -5,7 +5,6 @@ import { LEARNING, SKILLS } from '../data/portfolio.js';
 const GROUPS = [
   { key: 'frontend' },
   { key: 'apps' },
-  { key: 'database' },
   { key: 'tools' },
 ];
 
@@ -19,7 +18,7 @@ export default function Skills() {
           description="Technologies I use to build real, working applications — from interface to database."
         />
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {GROUPS.map(({ key }, index) => {
             const group = SKILLS[key];
             return (

@@ -37,11 +37,6 @@ export const SKILLS = {
     description: 'Turning static pages into usable, functional products.',
     items: ['Responsive Design', 'API Integration', 'Authentication', 'Role-Based Interfaces'],
   },
-  database: {
-    title: 'Database / Backend Services',
-    description: 'Connecting interfaces to real, secure data.',
-    items: ['Supabase', 'PostgreSQL', 'Row Level Security'],
-  },
   tools: {
     title: 'Tools',
     description: 'The workflow behind every project I ship.',
@@ -219,29 +214,10 @@ export const PROJECTS = [
       'Security-aware structure using Row Level Security policies',
     ],
     github: 'https://github.com/JennyCapricon/LSM-enterprise',
-    live: '',
+    live: 'https://jay-enterprise-19.netlify.app',
     caseStudy: true,
     featured: true,
     image: '/projects/jay-enterprise.png',
-  },
-  {
-    id: 'flowboard',
-    name: 'FlowBoard',
-    category: 'Web App',
-    filters: ['web-apps'],
-    tagline: 'Productivity / Project-Management Application',
-    description:
-      'A personal task manager with authentication and task CRUD built on a shared task-manager API. Part of a front-end collaboration project built with React and Vite.',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'React Router', 'Axios', 'React Hook Form'],
-    keyFeatures: ['Login and register flows', 'Task list with status updates', 'Task detail views', 'API integration with error handling'],
-    contribution: [
-      'Front-end implementation of the task-manager experience',
-      'Forms with validation via React Hook Form',
-    ],
-    github: 'https://github.com/JennyCapricon/flowboard',
-    live: '',
-    image: '/projects/flowboard.svg',
-    featured: true,
   },
   {
     id: 'creatorhub',
@@ -255,7 +231,7 @@ export const PROJECTS = [
     keyFeatures: ['Client app with state management (Zustand)', 'Charts and analytics visuals (Recharts)', 'Node API with authentication (JWT + bcrypt)'],
     contribution: ['Full front-end build', 'Server and database layer'], 
     github: 'https://github.com/JennyCapricon/CreatorHub',
-    live: '',
+    live: 'https://con-creator-hub.netlify.app',
     image: '/projects/creatorhub.svg',
   },
   {
@@ -270,83 +246,11 @@ export const PROJECTS = [
     keyFeatures: ['Role-based accounts (student, teacher, admin)', 'Question bank and exam scheduling', 'Timed CBT interface with flagging and navigation', 'Instant grading and performance reports', 'Analytics dashboard'],
     contribution: ['Front-end build with React and Tailwind', 'Backend API with Express and PostgreSQL'],
     github: 'https://github.com/JennyCapricon/AceTest',
-    live: '',
+    live: 'https://acetestex.netlify.app',
     image: '/projects/acetest.svg',
     featured: true,
   },
-  {
-    id: 'jenny-store',
-    name: 'Jenny Store',
-    category: 'E-Commerce',
-    filters: ['ecommerce', 'frontend'],
-    tagline: 'Jewelry & Body Accessories Store',
-    description:
-      'A storefront concept for jewelry and body accessories — a product-focused single-page shop with cart interaction, built with plain HTML, CSS and JavaScript.',
-    technologies: ['HTML5', 'CSS3', 'JavaScript'],
-    keyFeatures: ['Product showcase for jewelry and accessories', 'Cart interaction', 'Responsive layout'],
-    contribution: ['Complete front-end design and development'],
-    live: '',
-    image: '/projects/jenny-store.svg',
-  },
-  {
-    id: 'evolve30',
-    name: 'Evolve30',
-    category: 'Web App',
-    filters: ['web-apps', 'dashboards'],
-    tagline: '30-Day Personal Growth Challenge Platform',
-    description:
-      'A full-stack challenge platform where users pick 30-day goals (reading, fitness, coding and more), complete daily missions, track streaks and earn badges.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'Zustand', 'Zod', 'Recharts'],
-    keyFeatures: ['Daily missions and 30-day progress calendar', 'Streak counters and milestone badges', 'Progress analytics and achievement system'],
-    contribution: ['Front-end and application development'],
-    live: '',
-    image: '/projects/evolve30.svg',
-    featured: true,
-  },
-  {
-    id: 'hgam',
-    name: 'HGAM',
-    category: 'Web App',
-    filters: ['web-apps', 'dashboards'],
-    tagline: 'Holy Ghost Adoration Ministry — Digital Platform',
-    description:
-      'A digital platform for Holy Ghost Adoration Ministry with a React front-end and an API backend for content and administration.',
-    technologies: ['React', 'Vite', 'Node.js', 'Express'],
-    keyFeatures: ['Front-end with Vite and React', 'API backend for platform data'],
-    contribution: ['Full front-end build', 'Backend API'],
-    live: '',
-    image: '/projects/hgam.svg',
-  },
-  {
-    id: 'fraudwatch',
-    name: 'FraudWatch',
-    category: 'Web App',
-    filters: ['web-apps'],
-    tagline: 'Fraud Reporting & Verification Portal',
-    description:
-      'A React application for reporting and verifying fraud cases. Reports are stored locally and surfaced through a clean, section-based interface.',
-    technologies: ['React', 'Vite', 'JavaScript'],
-    keyFeatures: ['Report fraud flow with success feedback', 'Verify and browse existing reports', 'Persistence via localStorage'],
-    contribution: ['Front-end development'],
-    live: '',
-    image: '/projects/fraudwatch.svg',
-  },
-  {
-    id: 'temu-clone',
-    name: 'Temu Clone',
-    category: 'E-Commerce',
-    filters: ['ecommerce', 'frontend'],
-    tagline: 'E-Commerce UI Recreation',
-    description:
-      'A front-end recreation of a modern discount e-commerce storefront built with React and Vite — a practice build focused on layout and UI polish.',
-    technologies: ['React', 'Vite', 'CSS'],
-    keyFeatures: ['E-commerce storefront layout', 'Product grid and sections'],
-    contribution: ['Front-end implementation'],
-    practice: true,
-    live: '',
-    image: '/projects/temu-clone.svg',
-  },
-];
+  ];
 
 export const SMALL_PROJECTS = [
   {
@@ -646,70 +550,4 @@ export const DOCUMENTATION = [
       'Combining state management, charts and authentication in a full-stack React application.',
     ],
   },
-  {
-    id: 'flowboard',
-    name: 'FlowBoard',
-    tagline: 'Productivity / Project-Management Application',
-    image: '/projects/flowboard.svg',
-    github: 'https://github.com/JennyCapricon/flowboard',
-    overview:
-      'FlowBoard is a personal task and project-management application with authentication and full task CRUD, built on a shared task-manager API. It was part of a front-end collaboration project built with React and Vite.',
-    problem:
-      'Keeping track of tasks and projects across a workflow is easy to lose control of without a clear, structured tool.',
-    objectives: [
-      'Provide a simple task-manager with authentication.',
-      'Let users create, update, view and manage their tasks.',
-      'Integrate reliably with a shared task-manager API.',
-    ],
-    targetUsers: ['Individuals and small teams managing tasks'],
-    features: [
-      'Login and register flows',
-      'Task list with status updates',
-      'Task detail views',
-      'API integration with error handling',
-    ],
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'React Router', 'Axios', 'React Hook Form'],
-    role: ['Front-end implementation of the task-manager experience', 'Forms with validation via React Hook Form'],
-    process: [
-      'Set up a React + Vite project with routing.',
-      'Built forms with React Hook Form validation for auth and tasks.',
-      'Connected the interface to the shared task-manager API with Axios.',
-    ],
-    challenges: ['Working with a shared external API and handling errors cleanly.'],
-    solutions: ['Structured API integration with consistent error handling in the UI.'],
-    learned: [
-      'Form validation, client-side routing and consuming a shared API in a real collaboration project.',
-    ],
-  },
-  {
-    id: 'evolve30',
-    name: 'Evolve30',
-    tagline: '30-Day Personal Growth Challenge Platform',
-    image: '/projects/evolve30.svg',
-    overview:
-      'Evolve30 is a full-stack challenge platform where users pick 30-day goals (reading, fitness, coding and more), complete daily missions, track streaks and earn badges.',
-    problem:
-      'Staying consistent with personal growth goals is hard without structure and accountability.',
-    objectives: [
-      'Let users choose 30-day goals and complete daily missions.',
-      'Track streaks and award badges for consistency.',
-      'Show progress through analytics.',
-    ],
-    targetUsers: ['People running personal 30-day growth challenges'],
-    features: [
-      'Daily missions and 30-day progress calendar',
-      'Streak counters and milestone badges',
-      'Progress analytics and achievement system',
-    ],
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'Zustand', 'Zod', 'Recharts'],
-    role: ['Front-end and application development'],
-    process: [
-      'Built the application with Next.js and TypeScript.',
-      'Designed the 30-day challenge data model and missions.',
-      'Added progress tracking, streaks and badges.',
-    ],
-    challenges: ['Modelling 30-day progress and streak logic clearly.'],
-    solutions: ['A clear data model for daily missions, streaks and milestones.'],
-    learned: ['Working with Next.js, TypeScript and a typed full-stack application.'],
-  },
-];
+  ];

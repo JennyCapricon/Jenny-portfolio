@@ -6,14 +6,8 @@ const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'pr
 mkdirSync(outDir, { recursive: true });
 
 const projects = [
-  ['flowboard', 'FlowBoard', 'Productivity Task Manager'],
   ['creatorhub', 'Creator Hub', 'Creator Platform'],
   ['acetest', 'AceTest', 'Computer-Based Testing Platform'],
-  ['jenny-store', 'Jenny Store', 'Jewelry & Body Accessories'],
-  ['evolve30', 'Evolve30', '30-Day Growth Challenge'],
-  ['hgam', 'HGAM', 'Ministry Digital Platform'],
-  ['fraudwatch', 'FraudWatch', 'Fraud Reporting Portal'],
-  ['temu-clone', 'Temu Clone', 'E-Commerce UI Recreation'],
   ['terminal', 'Terminal Page', 'Front-End Project'],
   ['trust-app', 'Trust App Page', 'Front-End Project'],
   ['fabric-page', 'Fabric Store Page', 'Front-End Project'],
