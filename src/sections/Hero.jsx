@@ -34,7 +34,7 @@ export default function Hero() {
           </p>
 
           <h1
-            className="animate-enter mt-8 font-display text-[clamp(2.75rem,8.5vw,5.25rem)] font-bold leading-[1.12] tracking-[-0.025em] text-paper text-balance"
+            className="animate-enter mt-8 font-display text-[clamp(2.25rem,7vw,3.75rem)] font-bold leading-[1.12] tracking-[-0.025em] text-paper text-balance"
             style={{ animationDelay: '80ms' }}
           >
             {PROFILE.name}<span className="text-accent">.</span>
