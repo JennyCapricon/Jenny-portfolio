@@ -207,47 +207,6 @@ export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy
                     ))}
                   </div>
                 </div>
-
-                <div className="mt-20">
-                  <SectionLabel>Front-End Explorations</SectionLabel>
-                  <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    {SMALL_PROJECTS.map((project, index) => (
-                      <Reveal key={project.id} delay={index * 70}>
-                        <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink-line bg-ink-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/30">
-                          <div className="aspect-[16/10] overflow-hidden bg-ink-soft">
-                            <img
-                              src={project.image}
-                              alt={`${project.name} — ${project.label}`}
-                              loading="lazy"
-                              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                            />
-                          </div>
-                          <div className="flex flex-1 flex-col gap-3 p-5">
-                            <span className="font-mono text-[10px] uppercase tracking-wider text-accent">
-                              {project.label}
-                            </span>
-                            <h4 className="font-display text-sm font-semibold text-paper">
-                              {project.name}
-                            </h4>
-                            <p className="text-xs leading-relaxed text-muted">
-                              {project.description}
-                            </p>
-                            <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
-                              {project.technologies.map((tech) => (
-                                <span
-                                  key={tech}
-                                  className="rounded border border-ink-line bg-ink-soft px-1.5 py-0.5 font-mono text-[10px] text-muted"
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </article>
-                      </Reveal>
-                    ))}
-                  </div>
-                </div>
               </>
             )}
           </>

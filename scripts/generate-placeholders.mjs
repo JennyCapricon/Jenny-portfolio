@@ -8,10 +8,6 @@ mkdirSync(outDir, { recursive: true });
 const projects = [
   ['creatorhub', 'Creator Hub', 'Creator Platform'],
   ['acetest', 'AceTest', 'Computer-Based Testing Platform'],
-  ['terminal', 'Terminal Page', 'Front-End Project'],
-  ['trust-app', 'Trust App Page', 'Front-End Project'],
-  ['fabric-page', 'Fabric Store Page', 'Front-End Project'],
-  ['layout-practice', 'Layout Explorations', 'Practice Project'],
 ];
 
 function esc(s) {

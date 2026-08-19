@@ -252,40 +252,7 @@ export const PROJECTS = [
   },
   ];
 
-export const SMALL_PROJECTS = [
-  {
-    id: 'terminal-page',
-    name: 'Developer Terminal Page',
-    label: 'Front-End Project',
-    description: 'A developer-themed single page styled like a terminal.',
-    technologies: ['HTML', 'CSS'],
-    image: '/projects/terminal.svg',
-  },
-  {
-    id: 'trust-app',
-    name: 'Trust App Page',
-    label: 'Front-End Project',
-    description: 'A clean landing page design with a modern layout.',
-    technologies: ['HTML', 'CSS'],
-    image: '/projects/trust-app.svg',
-  },
-  {
-    id: 'fabric-page',
-    name: 'Fabric Store Page',
-    label: 'Front-End Project',
-    description: 'A fabric store product page with a bold visual layout.',
-    technologies: ['HTML', 'CSS'],
-    image: '/projects/fabric-page.svg',
-  },
-  {
-    id: 'gallery-practice',
-    name: 'Design & Layout Explorations',
-    label: 'Practice Project',
-    description: 'Multiple responsive page layouts exploring grids, hero sections and product styling.',
-    technologies: ['HTML', 'CSS'],
-    image: '/projects/layout-practice.svg',
-  },
-];
+export const SMALL_PROJECTS = [];
 
 export const JAY_ENTERPRISE_CASE_STUDY = {
   problem:

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { NAV_LINKS, PROFILE } from '../data/portfolio.js';
-import { CloseIcon, DownloadIcon, MenuIcon } from './icons.jsx';
+import { NAV_LINKS } from '../data/portfolio.js';
+import { CloseIcon, MenuIcon } from './icons.jsx';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -85,15 +85,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a
-            href={PROFILE.cvUrl}
-            download="Jenny_Nwadike_Frontend_Developer_CV.pdf"
-            className="hidden items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-ink transition-all duration-200 hover:bg-accent-strong hover:shadow-[0_10px_28px_-12px_rgba(232,181,74,0.5)] md:inline-flex"
-          >
-            <DownloadIcon />
-            Download CV
-          </a>
-
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-lg border border-ink-line bg-ink-card text-paper transition-colors hover:border-muted/60 md:hidden"
@@ -126,17 +117,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="pt-2">
-              <a
-                href={PROFILE.cvUrl}
-                download="Jenny_Nwadike_Frontend_Developer_CV.pdf"
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-3 text-base font-semibold text-ink transition-colors hover:bg-accent-strong"
-              >
-                <DownloadIcon />
-                Download CV
-              </a>
-            </li>
           </ul>
         </div>
       )}
