@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-9 sm:px-8 md:flex-row">
         <div className="flex items-center gap-4">
           <p className="font-display text-lg font-bold tracking-tight text-paper">
-            Jenny<span className="text-accent">.</span>
+            JaneFrances<span className="text-accent">.</span>
           </p>
           <span className="hidden text-sm text-muted sm:inline">
-            © {new Date().getFullYear()} Jenny. All rights reserved.
+            © {new Date().getFullYear()} Nwadike Chiamaka JaneFrances. All rights reserved.
           </span>
         </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
           )}
           <a
             href={`mailto:${PROFILE.email}`}
-            aria-label="Email Jenny"
+            aria-label="Email Nwadike Chiamaka JaneFrances"
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-ink-line text-muted transition-colors hover:border-accent/50 hover:text-accent"
           >
             <MailIcon size={15} />
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-muted md:hidden">
-          © {new Date().getFullYear()} Jenny. All rights reserved.
+          © {new Date().getFullYear()} Nwadike Chiamaka JaneFrances. All rights reserved.
         </p>
       </div>
     </footer>

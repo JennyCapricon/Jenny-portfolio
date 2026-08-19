@@ -1,5 +1,5 @@
 export const PROFILE = {
-  name: 'Jenny',
+  name: 'Nwadike Chiamaka JaneFrances',
   role: 'Front-End Web Developer',
   heroStatement:
     'I build modern, responsive and user-focused web applications that turn ideas into functional digital experiences.',

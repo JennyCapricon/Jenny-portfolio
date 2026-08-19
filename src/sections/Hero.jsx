@@ -34,10 +34,10 @@ export default function Hero() {
           </p>
 
           <h1
-            className="animate-enter mt-8 font-display text-[clamp(4.5rem,14vw,8rem)] font-bold leading-[0.92] tracking-[-0.03em] text-paper"
+            className="animate-enter mt-8 font-display text-[clamp(2.75rem,8.5vw,5.25rem)] font-bold leading-[1.12] tracking-[-0.025em] text-paper text-balance"
             style={{ animationDelay: '80ms' }}
           >
-            Jenny<span className="text-accent">.</span>
+            {PROFILE.name}<span className="text-accent">.</span>
           </h1>
 
           <p
@@ -122,7 +122,7 @@ export default function Hero() {
           />
           <img
             src="/images/JANE.jpeg"
-            alt="Portrait of Jenny, Front-End Web Developer"
+            alt="Portrait of Nwadike Chiamaka JaneFrances, Front-End Web Developer"
             className="relative aspect-[3/4] w-full rounded-[1.75rem] border border-ink-line bg-ink-card object-cover object-top shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)]"
           />
           <span

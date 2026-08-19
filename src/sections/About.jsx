@@ -54,7 +54,7 @@ export default function About() {
                 <span className="font-display text-lg font-semibold text-paper">
                   Who I am —{' '}
                 </span>
-                I'm Jenny, a Front-End Web Developer passionate about turning ideas into practical
+                I'm {PROFILE.name}, a Front-End Web Developer passionate about turning ideas into practical
                 digital experiences. I enjoy building responsive interfaces, interactive web
                 applications and real-world products that solve problems.
               </p>

@@ -1,6 +1,6 @@
-# Jenny — Front-End Web Developer Portfolio
+# Nwadike Chiamaka JaneFrances — Front-End Web Developer Portfolio
 
-The personal portfolio of **Jenny**, a Front-End Web Developer. This site presents my skills, real projects and professional profile — including the **Jay Enterprise** flagship project, project documentation, CV, GitHub and LinkedIn.
+The personal portfolio of **Nwadike Chiamaka JaneFrances**, a Front-End Web Developer. This site presents my skills, real projects and professional profile — including the **Jay Enterprise** flagship project, project documentation, CV, GitHub and LinkedIn.
 
 Built with **React + Vite + Tailwind CSS**.
 
@@ -71,4 +71,4 @@ The `public/projects/` images are clean placeholders. Replace each file with a r
 
 ## Author
 
-**Jenny** — Front-End Web Developer
+**Nwadike Chiamaka JaneFrances** — Front-End Web Developer

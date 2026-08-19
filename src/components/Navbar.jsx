@@ -53,9 +53,9 @@ export default function Navbar() {
         <a
           href="#home"
           className="group flex items-baseline gap-0.5 font-display text-xl font-bold tracking-tight text-paper"
-          aria-label="Jenny — back to top"
+          aria-label="JaneFrances — back to top"
         >
-          <span className="transition-opacity group-hover:opacity-80">Jenny</span>
+          <span className="transition-opacity group-hover:opacity-80">JaneFrances</span>
           <span className="text-accent transition-colors group-hover:text-accent-strong">.</span>
         </a>
 
