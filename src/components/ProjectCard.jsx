@@ -13,7 +13,9 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
           src={project.image}
           alt={`${project.name} — ${project.tagline}`}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.04] ${
+            project.imageFit === 'contain' ? 'object-contain' : 'object-cover'
+          }`}
         />
         <div
           className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ink-card to-transparent"

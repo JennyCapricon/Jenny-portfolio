@@ -2,7 +2,7 @@ import ProjectCard from '../components/ProjectCard.jsx';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import { ExternalIcon, GitHubIcon } from '../components/icons.jsx';
-import { PROJECTS, PROJECT_FILTERS } from '../data/portfolio.js';
+import { PROJECTS } from '../data/portfolio.js';
 
 function FlagshipProject({ project, onOpenCaseStudy }) {
   const hasLive = Boolean(project.live);
@@ -101,15 +101,9 @@ function SectionLabel({ children }) {
   );
 }
 
-export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy }) {
-  const visibleProjects = PROJECTS.filter((project) => {
-    if (activeFilter === 'all') return true;
-    return project.filters.includes(activeFilter);
-  });
-
+export default function Projects({ onOpenCaseStudy }) {
   const flagship = PROJECTS.find((project) => project.id === 'jay-enterprise');
   const featured = PROJECTS.filter((project) => project.featured && project.id !== 'jay-enterprise');
-  const isFiltered = activeFilter !== 'all';
 
   return (
     <section id="projects" className="border-t border-ink-line">
@@ -120,65 +114,20 @@ export default function Projects({ activeFilter, onFilterChange, onOpenCaseStudy
           description="A selection of projects I've designed and developed using modern web technologies."
         />
 
-        <Reveal className="mt-10">
-          <div
-            role="group"
-            aria-label="Filter projects by category"
-            className="flex flex-wrap justify-center gap-2"
-          >
-            {PROJECT_FILTERS.map((filter) => {
-              const active = activeFilter === filter.id;
-              return (
-                <button
-                  key={filter.id}
-                  type="button"
-                  aria-pressed={active}
-                  onClick={() => onFilterChange(filter.id)}
-                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                    active
-                      ? 'bg-accent text-ink'
-                      : 'border border-ink-line text-muted hover:border-muted/60 hover:text-paper'
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              );
-            })}
-          </div>
+        <Reveal className="mt-16">
+          <FlagshipProject project={flagship} onOpenCaseStudy={onOpenCaseStudy} />
         </Reveal>
 
-        {isFiltered ? (
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {visibleProjects.map((project, index) => (
-              <Reveal key={project.id} delay={(index % 3) * 80}>
+        <Reveal className="mt-20">
+          <SectionLabel>More Featured Projects</SectionLabel>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featured.map((project, index) => (
+              <Reveal key={project.id} delay={index * 80}>
                 <ProjectCard project={project} onOpenCaseStudy={onOpenCaseStudy} />
               </Reveal>
             ))}
           </div>
-        ) : (
-          <>
-            <div className="mt-16">
-              <Reveal>
-                <FlagshipProject project={flagship} onOpenCaseStudy={onOpenCaseStudy} />
-              </Reveal>
-            </div>
-
-            <div className="mt-20">
-              <SectionLabel>More Featured Projects</SectionLabel>
-              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {featured.map((project, index) => (
-                  <Reveal key={project.id} delay={index * 80}>
-                    <ProjectCard project={project} onOpenCaseStudy={onOpenCaseStudy} />
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </>
-        )}
-
-        {visibleProjects.length === 0 && isFiltered && (
-          <p className="mt-12 text-center text-muted">No projects in this category yet.</p>
-        )}
+        </Reveal>
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'pr
 mkdirSync(outDir, { recursive: true });
 
 const projects = [
-  ['creatorhub', 'Creator Hub', 'Creator Platform'],
   ['acetest', 'AceTest', 'Computer-Based Testing Platform'],
 ];
 

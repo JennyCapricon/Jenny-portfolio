@@ -232,7 +232,8 @@ export const PROJECTS = [
     contribution: ['Full front-end build', 'Server and database layer'], 
     github: 'https://github.com/JennyCapricon/CreatorHub',
     live: 'https://con-creator-hub.netlify.app',
-    image: '/projects/creatorhub.svg',
+    image: '/projects/creatorhub.png',
+    imageFit: 'contain',
     featured: true,
   },
   {
@@ -248,7 +249,7 @@ export const PROJECTS = [
     contribution: ['Front-end build with React and Tailwind', 'Backend API with Express and PostgreSQL'],
     github: 'https://github.com/JennyCapricon/AceTest',
     live: 'https://acetestex.netlify.app',
-    image: '/projects/acetest.svg',
+    image: '/projects/acetest.png',
     featured: true,
   },
   ];
@@ -424,7 +425,7 @@ export const DOCUMENTATION = [
     id: 'acetest',
     name: 'AceTest',
     tagline: 'Computer-Based Testing Platform',
-    image: '/projects/acetest.svg',
+    image: '/projects/acetest.png',
     github: 'https://github.com/JennyCapricon/AceTest',
     overview:
       'AceTest is a secure web-based Computer-Based Testing (CBT) platform for schools, universities, tutorial centres and certification bodies. It manages exams, question banks, results and analytics with role-based student, teacher and admin accounts.',
@@ -477,7 +478,8 @@ export const DOCUMENTATION = [
     id: 'creatorhub',
     name: 'Creator Hub',
     tagline: 'Creator Platform',
-    image: '/projects/creatorhub.svg',
+    image: '/projects/creatorhub.png',
+    imageFit: 'contain',
     github: 'https://github.com/JennyCapricon/CreatorHub',
     overview:
       'Creator Hub is a full-stack creator platform. It pairs a React front-end (Firebase, Zustand state management, charts) with an Express + MongoDB API that uses JWT authentication.',

@@ -13,7 +13,6 @@ import ProfessionalProfile from './sections/ProfessionalProfile.jsx';
 import Contact from './sections/Contact.jsx';
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState('all');
   const [caseStudy, setCaseStudy] = useState(null);
 
   const openCaseStudy = useCallback((project) => setCaseStudy(project), []);
@@ -34,11 +33,7 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
-        <Projects
-          activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
-          onOpenCaseStudy={openCaseStudy}
-        />
+        <Projects onOpenCaseStudy={openCaseStudy} />
         <Documentation />
         <Process />
         <ProfessionalProfile />

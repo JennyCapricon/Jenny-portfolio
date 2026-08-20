@@ -75,7 +75,9 @@ export default function Documentation() {
                   src={doc.image}
                   alt={`${doc.name} — ${doc.tagline} interface preview`}
                   loading="lazy"
-                  className="aspect-[21/9] w-full object-cover"
+                  className={`aspect-[21/9] w-full ${
+                    doc.imageFit === 'contain' ? 'object-contain' : 'object-cover'
+                  }`}
                 />
               </div>
 
